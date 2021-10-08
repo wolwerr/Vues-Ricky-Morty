@@ -7,5 +7,29 @@ export default {
         }).catch(error =>{
             return error
         })
-    }
+    },
+    getEpisodioById(id){
+        return api.get(`/episode/${id}`).then(res=>{
+            return res
+        }).catch(error =>{
+            return error
+        })
+    },
+    getEpisodioByPage(id){
+        return api.get(`/episode/?page=${id}`).then(res =>{
+            return res
+        }).catch(error =>{
+            return error
+        })
+    },
+    getPEpisodioByName(name) {
+        return api
+        .get(`/episode/?name=${name}`)
+        .then((res) => {
+            return res;
+        })
+        .catch((error) => {
+            return error;
+        });
+    },
 }

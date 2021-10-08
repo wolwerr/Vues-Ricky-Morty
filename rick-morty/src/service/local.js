@@ -1,10 +1,10 @@
-import api from './api';
+import api from './api'
 
-export default {
+export default{
     getLocal(){
         return api.get('/location').then(res =>{
             return res
-        }).catch(error => {
+        }).catch(error =>{
             return error
         })
     }
